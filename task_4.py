@@ -18,3 +18,15 @@ class Car:
         self.speed = speed
         self.color = color
         self.is_police = is_police
+
+class TownCar(Car):
+    pass
+
+class SportCar(Car):
+    pass
+
+class WorkCar(Car):
+    pass
+
+class PoliceCar(Car):
+    pass
