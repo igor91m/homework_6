@@ -11,3 +11,10 @@
 Выполните доступ к атрибутам, выведите результат. Выполните вызов методов и также покажите результат.
 '''
 
+class Car:
+
+    def __init__(self, name, speed, color, is_police=False):
+        self.name = name
+        self.speed = speed
+        self.color = color
+        self.is_police = is_police
