@@ -36,3 +36,23 @@ class TrafficLight:
 
 traff_light = TrafficLight()
 print(traff_light.running())
+
+'''
+from time import sleep
+from datetime import datetime as dt
+
+class TrafficLight:
+    states = {'red': 7, 'yellow': 2, 'green': 10}
+    _color = ''
+
+    def running(self):
+        for color, e_time in self.states.items():
+        self._color = color
+        start_state_time = dt.now()
+        print(f" Светофор '{self._color}' " f" светит {e_time} секунд")
+        sleep(e_time)
+        print(f" Светофор '{self._color}' проверка светил " f"{(dt.now() - start_state_time).seconds} секунд")
+            if __name_ == 'main':
+            r = TrafficLight()
+            r.running()
+'''
