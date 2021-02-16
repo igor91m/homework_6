@@ -9,3 +9,23 @@ income (доход). Последний атрибут должен быть з�
 проверить значения атрибутов, вызвать методы экземпляров).
 '''
 
+class Worker:
+
+    def __init__(self, name='Вася', surname='Пупкин', position='рабочий', wage=50, bonus=10):
+        self.name = name
+        self.surname = surname
+        self.position = position
+        self._income = {'wage': wage, 'bonus': bonus}
+
+class Position(Worker):
+
+    def get_full_name(self):
+        return self.name + ' ' + self.surname
+
+    def get_full_salary(self):
+        return self._income['wage'] + self._income['bonus']
+
+
+posit = Position('Вася', 'Пупкин', 'рабочий', 90, 15)
+print(f'{posit.name}, {posit.surname}, {posit.position}, {posit._income}')
+print(f'Общий доход: {posit.get_full_name()}, {posit.get_full_salary()}')
